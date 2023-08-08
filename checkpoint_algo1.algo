@@ -1,0 +1,41 @@
+ALGORITHM NUMBER_OF_CHARACTERS
+VAR
+    str:STRING:="the best in the world.";
+    count:INTEGER:=0;
+BEGIN
+    FOR (int i:=0,1<str.length(),i++) DO
+    IF(str.charAt[i]) THEN
+            count++
+        END_IF
+        END_FOR
+        WRITE(count)
+END
+
+ALGORITHM NUMBER_OF_WORDS
+VAR
+    str:STRING:="the best in the world.";
+    count:INTEGER:=0;
+BEGIN
+    FOR (int i:=0,i<str.length(),i++) DO
+        IF(str[i]==" ") THEN
+            count++;
+        END_IF
+    END_FOR
+    count++
+    WRITE(count)
+END
+
+ALGORITHM NUMBER_OF_VOWELS
+VAR
+    str:STRING:="the best in the world.";
+    count:INTEGER:=0;
+    vowels:ARRAY_OF_CHAR[6]:=["a","e","i","o","u","y"]
+BEGIN
+    FOR (int i:=0,i<str.length(),i++) DO
+        FOR(int j:=0,j<6,j++) DO
+        IF(str[i] in vowels[j]) THEN
+            count++
+        END_IF
+    END_FOR
+    WRITE(count)
+END
